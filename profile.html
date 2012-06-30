@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>IITB Database</title>
+    <link rel="stylesheet" href="css/profile_style.css" />
+    <script type="text/javascript" language="javascript" src="js/jquery.js"></script>
+    <script src="js/login.js"></script>
+	<script>
+$(document).ready(function() {
+	$('.tab li a').click(function() {
+		$('li').removeClass('active');
+		$(this).parent().addClass('active');
+	});
+}); 
+</script>
+</head>
+<body>
+	<img id='logo' src='images/logo.png' alt='IITB Database'></img>
+    
+	<div id="topProfileContainer">
+		<div><a href=#><img id='topRightProfilePic' src='profilePics/default-profile.png' alt='Name'></img></a></div>
+		<div><a href=#>Raghav Sagar</a></div>
+	</div>
+	<!--<div id="topProfileSeparator">
+		<img id='topRightProfilePic' src='images/separatorRed.png' alt=''></img>
+	</div> -->
+	<div id="navigationBar">
+		<a href=#><div>Contact Us</div></a><!--
+	 --><a href=#><div>My Profile</div></a><!--
+	 --><a href=#><div>Search</div></a><!--
+	 -->
+	</div>
+<!-- Black Menu -->
+	<ul id="menu" class="black">
+		<li><a href="#">Basic&nbsp;&nbsp;Info</a></li>
+		<li class="active"><a href="#">Details</a></li>
+		<li><a href="#">My&nbsp;&nbsp;Contacts</a></li>
+		<li><a href="#">Moodle&nbsp;&nbsp;Sync</a></li>
+		<!--<li><a href="#">Contact</a></li>-->
+	</ul>
+	<div id='profileBasicInfo'>
+	</div>
+	<div id='profileDetails'>
+	</div>
+	<div id='profileMyContacts'>
+	</div>
+	
+</body>
+</html>

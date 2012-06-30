@@ -1,0 +1,258 @@
+html,body{
+	width:100%;height:100%;padding:0;margin:0;
+	background-image:url('../images/background.png');
+	background-repeat:repeat-x;
+}
+a { text-decoration:none }
+
+/* #bar { width:100%; height:35px; padding:15px 0; background:url(../images/bar.png) repeat-x; } */
+#container { width:960px; margin:0 auto; }
+
+/* #logo */
+#logo {
+	float:left;
+}
+
+/*-------LOGIN STARTS HERE -------*/
+
+/* Login Container (default to float:right) */
+#loginContainer {
+    position:relative;
+    float:right;
+    font-size:12px;
+}
+
+/* Login Button */
+#loginButton { 
+    display:inline-block;
+    float:right;
+    background:black ;/*url(../images/buttonbgBlack.png) repeat-x;*/ 
+    border:1px solid #899caa; 
+    border-radius:3px;
+    -moz-border-radius:3px;
+    position:relative;
+    z-index:30;
+    cursor:pointer;
+}
+
+/* Login Button Text */
+#loginButton span {
+    color:#ffffff; 
+    font-size:14px;
+	font-weight:600;
+    padding:7px 29px 9px 10px;
+    background:url(../images/loginArrowWhite.png) no-repeat 53px 7px;
+    display:block
+}
+
+
+#loginButton span:hover {
+	box-shadow: 1px 1px 5px #555555;
+	-moz-box-shadow: 1px 1px 5px #555555;
+	-webkit-box-shadow: 1px 1px 5px #555555;
+	box-shadow: 1px 1px 5px #555555;
+}
+
+/* Login Box */
+#loginBox {
+    position:absolute;
+    top:34px;
+    right:0;
+    display:none;
+    z-index:29;
+}
+
+/* If the Login Button has been clicked */    
+#loginButton.active {
+    border-radius:3px 3px 0 0;
+}
+
+#loginButton.active span {
+    background-position:53px -76px;
+}
+
+/* A Line added to overlap the border */
+#loginButton.active em {
+    position:absolute;
+    width:100%;
+    height:1px;
+    background:black;
+    bottom:-1px;
+}
+
+/* Login Form */
+#loginForm {
+    width:248px; 
+    border:1px solid #899caa;
+    border-radius:3px 0 3px 3px;
+    -moz-border-radius:3px 0 3px 3px;
+    -webkit-border-radius:3px 0 3px 3px;
+	margin-top:-1px;
+    background:black;
+    padding:4px;
+}
+
+#loginForm fieldset {
+    margin:0 0 12px 0;
+    display:block;
+    border:0;
+    padding:0;
+}
+
+fieldset#body {
+    background:#fff;
+    border-radius:3px;
+    -moz-border-radius:3px;
+    padding:10px 13px;
+    margin:0;
+}
+
+
+#body label {
+    color:#3a454d;
+    margin:9px 0 0 0;
+    display:block;
+    float:left;
+}
+
+#loginForm #body fieldset label {
+    display:block;
+    float:none;
+    margin:0 0 6px 0;
+}
+
+/* Default Input */
+#loginForm input {
+    width:92%;
+    border:1px solid #899caa;
+    border-radius:3px;
+    -moz-border-radius:3px;
+    color:#3a454d;
+    padding:8px 8px;
+    box-shadow:inset 0px 1px 3px #bbb;
+    -webkit-box-shadow:inset 0px 1px 3px #bbb;
+    -moz-box-shadow:inset 0px 1px 3px #bbb;
+    font-size:13px;
+}
+
+/* Sign In Button */
+#loginForm #login {
+    width:auto;
+	font-size:14px;
+    float:left;
+    background:#339cdf url(../images/loginbuttonbgDarker.png) repeat-x;
+    color:#fff;
+	font-weight:bold;
+    padding:7px 10px 8px 10px;
+    text-shadow:0px -1px #278db8;
+    border:1px solid #339cdf;
+    box-shadow:none;
+    -moz-box-shadow:none;
+    -webkit-box-shadow:none;
+    margin:0 12px 0 0;
+    cursor:pointer;
+    *padding:7px 2px 8px 2px; /* IE7 Fix */
+}
+#loginForm #login:hover {
+	box-shadow: 1px 1px 5px #555555;
+	-moz-box-shadow: 1px 1px 5px #555555;
+	-webkit-box-shadow: 1px 1px 5px #555555;
+}
+
+
+
+input:focus {
+    outline:none;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------*/
+
+/* div container containing the form  */
+#simpleSearchContainer {
+	float:none;
+	margin:0 auto;
+	text-align:center;
+	clear:both;
+}
+#simpleSearchContainer form{
+	margin:7px
+} 
+/* Style the search input field. */
+#field {
+    width:550px; 
+    height:30px; 
+    line-height:30px;
+    text-indent:5px; 
+    font-family:arial, sans-serif; 
+    font-size:1em; 
+    color:#333; 
+    background: #fff; 
+    border:solid 1px #c0c0c0; 
+	margin-bottom:15px;
+}
+/* ------------------------------------------------------------------------------------------------------------------------------ */
+/* Style of advanced search */
+
+#advancedSearchContainer {
+	clear:both;
+	float:none;
+	margin:0 auto;
+	text-align:center;
+}
+#advancedSearchContainer form{
+	margin:7px
+}
+#advancedSearchContainer form table{
+	width:50%;
+	margin:auto;
+}  
+#advancedSearchContainer form table tr td{
+	padding:5px;
+} 
+#advancedSearchContainer form table tr td input{
+	width:140px;
+}
+#advancedSearchContainer form table tr td select{
+	width:140px;
+} 
+.lalign {text-align:left;margin:0px 3px;}
+.ralign {text-align:right;margin:0px 3px;}
+/* Syle the search button. Settings of line-height, font-size, text-indent used to hide submit value in IE */
+#submit {
+    cursor:pointer; 
+    width:120px; 
+    height: 50px; 
+    line-height:0; 
+	color:white;
+	font-weight:normal;
+    font-size:19px;
+	font-style:"Georgia";
+    /* text-indent:-999px; */
+    /* color: transparent;  */
+    border: 1px solid black;
+	background-color:black;
+	padding:5px 7px;
+    -moz-border-radius: 2px; 
+    -webkit-border-radius: 2px; 
+}
+/* Style the search button hover state */
+#submit:hover {
+		font-weight:bold;
+	box-shadow: 2px 2px 10px #555555;
+	-moz-box-shadow: 2px 2px 10px #555555;
+	-webkit-box-shadow: 2px 2px 10px #555555;
+}
+/* Clear floats 
+.fclear {clear:both}*/
+
+.switch_link {
+	color:red;
+}
+.switch_link:hover {
+	font-weight:bold;
+}
+
+.extraFieldMessage {
+	font-size:12px;
+	color:#1317c5;
+}

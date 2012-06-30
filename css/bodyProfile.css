@@ -1,0 +1,39 @@
+html,body{
+	width:100%;height:100%;padding:0;margin:0;
+}
+a { text-decoration:none }
+
+/* The CSS Code for the menu starts here */
+#menu {
+	clear:both;
+	/*font-family: Arial, sans-serif;*/
+	font-weight: bold;
+	font-family:georgia;
+	text-transform: uppercase;
+	padding: 0 0 0 10px;
+	list-style-type: none;
+	font-size: 15px;
+	background: #eee;
+	height: 36px;
+}
+#menu li {
+	float: left;
+	margin: 0;		
+}
+#menu li a {
+	text-decoration: none;
+	display: block;
+	padding: 0 20px;
+	line-height: 36px;
+}
+		
+/* Black Menu */
+#menu.black {
+	border-top: 1px solid #333;
+	border-left: 1px solid #333;
+	border-bottom: 1px solid #000;
+	border-right: 1px solid #000;
+	background: #333;
+}
+#menu.black a {color: #dddddd;}
+#menu.black li a:hover, #menu.black li.active a {color: #aaaaaa; background: #555; border-bottom: 1px solid #444;}
