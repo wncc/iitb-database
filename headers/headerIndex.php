@@ -19,6 +19,7 @@ elseif($_SESSION['folderLevel'] == 1){
 </head>
 <body>
 	<img id='logo' src='<?php echo $headerPath; ?>images/logo.png' alt='IITB Database'></img>
+	<p class="headerPath" style="display:none;"><?php echo $headerPath; ?></p>
     <div id="bar">
         <div id="container">
             <!-- Login Starts Here -->
@@ -26,7 +27,7 @@ elseif($_SESSION['folderLevel'] == 1){
                 <a href="#" id="loginButton"><span>Login</span><em></em></a>
                 <div style="clear:both"></div>
                 <div id="loginBox">                
-                    <form name="loginForm" id="loginForm" action="<?php echo $headerPath; ?>login/loginCheck.php" method="post">
+                    <form name="loginForm" id="loginForm" action="#" method="post">
                         <fieldset id="body">
                             <fieldset>
                                 <label for="email">LDAP ID</label>

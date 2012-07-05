@@ -26,7 +26,7 @@ $(document).ready(function() {
 </head>
 <body>
 	<img id='logo' src='<?php echo $headerPath; ?>images/logo.png' alt='IITB Database'></img>
-    
+    <p class="headerPath" style="display:none;"><?php echo $headerPath; ?></p>
 	<div id="topProfileContainer">
 		<div><a href=#><img id='topRightProfilePic' src='<?php echo $headerPath; ?>profilePics/default-profile.png' alt='Name'></img></a></div>
 		<div><a href=#>Raghav Sagar</a></div>

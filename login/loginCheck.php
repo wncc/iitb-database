@@ -13,18 +13,18 @@ if($_POST['ldapId']) {
 		$baseDN = $row->distinguishedName;
 		// temporary session
 		//session_unset();
-		echo '<pre>';print_r($_SESSION);
+		echo 'before:</br><pre>';print_r($_SESSION);
 		$_SESSION['tempBaseDN'] = $baseDN;
 		$_SESSION['tempMd5'] = $md5LdapPassword;
 		echo 'temp set';
-		echo '<pre>';print_r($_SESSION);
+		echo 'after:</br><pre>';print_r($_SESSION);
 	}
 }
 
 elseif($_GET['baseDN']) {
 	$baseDN = $_GET['baseDN'];
 	$md5LdapPassword = $_GET['md5'];
-	echo '<pre>';print_r($_SESSION);
+	echo 'before:</br><pre>';print_r($_SESSION);echo '</br>';
 	if($baseDN == $_SESSION['tempBaseDN'] && $md5LdapPassword == $_SESSION['tempMd5']) {
 		//session_unset();
 		// session starts here
@@ -37,8 +37,8 @@ elseif($_GET['baseDN']) {
 			$_SESSION['ldapId'] = $row->ldapId;
 			$_SESSION['rollNo'] = $row->rollNo;
 			$_SESSION['fullName'] = $row->fullName;
-			//header('Location: http://www.iitbdatabase.co.cc?success=1');
-			echo '<pre>';print_r($_SESSION);
+			header('Location: http://www.iitbdatabase.co.cc?success=1');
+			echo 'after:</br><pre>';print_r($_SESSION);
 		}
 	}
 }

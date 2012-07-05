@@ -39,15 +39,16 @@ $(document).ready(function() {
 		
 		else if(id.match(idPattern)){
 			alert(id + '\n' + pass);
+			var headerPath = $('p.headerPath').text();
 			$.ajax({
 				type:"POST",
-				url: "login/loginCheck.php",
+				url: headerPath + "login/loginCheck.php",
 				data: {ldapId: id , ldapPassword: pass},
 				success: function(loginCheck) {
 					alert('success: ' + loginCheck);
 					$.ajax({
 						type:"POST",
-						url: "login/getCseFields.php",
+						url: headerPath + "login/getCseFields.php",
 						data: {ldapId: id , ldapPassword: pass},
 						dataType: "json",
 						success: function(jsonObj) {
